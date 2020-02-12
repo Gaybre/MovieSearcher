@@ -1,4 +1,7 @@
-.carousel {
+body {
+  font-family: arial;
+}
+  .carousel {
   width: 100%;
   overflow: scroll;
   padding: 30px;
@@ -7,7 +10,6 @@
 .carousel__container {
   white-space: nowrap;
   margin: 70px 0px;
-  padding-bottom: 10px;
 }
 .carousel-item {
   background-color: #AAAE8E;
@@ -18,7 +20,7 @@
   margin-right: 10px;
   display: inline-block;
   cursor: pointer;
-  transition: 450ms;
+  transition: 500ms all;
   transform-origin: center left;
   position: relative;
 }
@@ -27,6 +29,7 @@
 }
 .carousel__container:hover .carousel-item {
   opacity: 0.3;
+  transition: 500ms;
 }
 .carousel__container:hover .carousel-item:hover {
   transform: scale(1.5);
@@ -38,14 +41,29 @@
   object-fit: cover;
 }
 .carousel-item__details {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
   font-size: 10px;
   opacity: 0;
-  transition: 450ms opacity;
+  transition: 500ms opacity;
   padding: 10px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+.carousel-item__details:hover {
+  opacity: 1;
+}
+.carousel-item__icon {
+  width: 20px;
+}
+.carousel-item__details--title {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+.carousel-item__details--subtitle {
+  color: white;
+  font-size: 10px;
 }
