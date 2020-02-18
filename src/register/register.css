@@ -99,3 +99,16 @@ body {
 .footer a:hover {
 	text-decoration: underline;
 }
+@media only screen and (max-width: 600px) {
+  .register__container {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding: 0px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

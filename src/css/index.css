@@ -84,6 +84,9 @@ body {
 ::placeholder {
 	color: white;
 }
+@media only screen and (max-width: 600px) {
+
+}
 
 /*
 https://coolors.co/3a606e-607b7d-828e82-aaae8e-e0e0e0
