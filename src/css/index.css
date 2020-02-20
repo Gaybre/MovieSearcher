@@ -84,8 +84,18 @@ body {
 ::placeholder {
 	color: white;
 }
-@media only screen and (max-width: 600px) {
 
+@media only screen and (max-width: 720px) {
+  .header__img {
+  	width: 180px;
+  }
+  .header__menu {
+    width: 180px;
+    margin-right: 0px;
+  }
+  .header__menu--profile {
+    margin: 0px;
+  }
 }
 
 /*
