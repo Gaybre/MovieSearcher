@@ -74,11 +74,13 @@ h1 {
 }
 
 /*----------------- responsive -----------*/
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 500px) {
   .footer div {
 		display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .footer div a {
     margin-bottom: 10px;
   }
 }
