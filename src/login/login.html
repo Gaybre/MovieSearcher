@@ -3,41 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="icon" href="../img/icon.png">
     <link rel="stylesheet" href="./login.css">
     <title>Login</title>
   </head>
   <body>
+
     <header class="header">
-      <img class="header__img" src="../img/logo3.png" alt="LogoGaybreMovieSearch">
+      <img tabindex="0" title="Gaybre Streaming" class="header__img" src="../img/logo3.png" alt="LogoGaybreMovieSearch">
     </header>
-		<div class="login">
-			<div class="login__container">
-				<h2>Iniciar sesión</h2>
-				<form class="login__container--form">
-					<input type="text" class="input" placeholder="correo">
-					<input type="password" class="input" placeholder="contraseña">
-					<button class="button">Iniciar sesón</button>
-					<div class="login__container--remember-me">
-						<label>
-							<input type="checkbox" id="cbox1" value="checkbox">Recuerdame
-						</label>
-						<a href="../notFound/notFound.html">Olvidé mi contraseña</a>
-					</div>
-				</form>
-				<section class="login__container--social-media">
-					<div><img src="../img/googleIcon.png" alt="imgGoogle">Inicia sesión con Google</div>
-					<div><img src="../img/twitterIcon.png" alt="imgTwitter">Inicia sesión con Twitter</div>
-				</section>
-				<p class="login__container--register">No tienes ninguna cuenta <a href="../register/register.html">Registrate</a></p>
-			</div>
+
+	<div class="login">
+		<div class="login__container">
+			<h2 tabindex="0" title="iniciar sesión">Iniciar sesión</h2>
+			<form class="login__container--form">
+				<input type="text" class="input" title="escribe tu correo" placeholder="correo">
+				<input type="password" class="input" title="escribe tu contraseña" placeholder="contraseña">
+				<button class="button" title="botón de login">Iniciar sesón</button>
+				<div class="login__container--remember-me">
+					<label>
+						<input type="checkbox" title="recuerdame" id="cbox1" value="checkbox">Recuerdame
+					</label>
+					<a title="Olvidé mi contraseña" href="../notFound/notFound.html">Olvidé mi contraseña</a>
+				</div>
+			</form>
+			<section class="login__container--social-media">
+				<div><img tabindex="0" title="login con Google" src="../img/googleIcon.png" alt="imgGoogle">Inicia sesión con Google</div>
+				<div><img tabindex="0" title="login con Twitter" src="../img/twitterIcon.png" alt="imgTwitter">Inicia sesión con Twitter</div>
+			</section>
+			<p class="login__container--register">¿Aun no tienes una cuenta? <a title="registrate" href="../register/register.html">Registrate</a></p>
 		</div>
+	</div>
+
     <footer class="footer">
       <div>
-        <a href="../notFound/notFound.html">Terminos de uso</a>
-        <a href="../notFound/notFound.html">Declaración de privacidad</a>
-        <a href="../notFound/notFound.html">Centro de ayuda</a>
+        <a title="Terminos de uso" href="../notFound/notFound.html">Terminos de uso</a>
+        <a title="Declaración de privacidad" href="../notFound/notFound.html">Declaración de privacidad</a>
+        <a title="Centro de ayuda" href="../notFound/notFound.html">Centro de ayuda</a>
       </div>
       <a class="gitLink" href="https://github.com/Gaybre/MovieSearcher">Ir al repositorio</a>
     </footer>
+
   </body>
 </html>
