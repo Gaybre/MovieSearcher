@@ -1,15 +1,21 @@
+const URL_MOVIES_API   = `https://yts.mx/api/v2/list_movies.json?`
 const $comedyContainer = document.getElementById('comedy')
 const $sciFicContainer = document.getElementById('sciFic')
-const $horrorContainer = document.getElementById('horror');
+const $horrorContainer = document.getElementById('horror')
+const $inputMovie	   = document.getElementById('inputMovie')
+const $findMovie 	   = document.getElementById('findMovie')
+const $form			   = document.getElementById('form')
 
-(async function getMovies() {
+
+;(async function getMovies() {
 	//Realiza las consultas a la API y devuelve el listado de peliculas de la data
 	async function getMoviesList(genre) {
-		const URL_MOVIES = await fetch(`https://yts.mx/api/v2/list_movies.json?genre=${genre}`)
-		const response	 = await URL_MOVIES.json()
-		const res 		 = response.data.movies
-		console.log(res)
-		return res
+		const URL = `${URL_MOVIES_API}genre=${genre}&order_by=asc`
+
+		const response	 = await fetch(URL)
+		const res 		 = await response.json()
+		const r 		 = res.data.movies
+		return r
 	}
 	//Almacenan un array con las listas de pelicula, pasando por parametro el genero
 	const comedyList = await getMoviesList('comedy')
@@ -43,7 +49,20 @@ const $horrorContainer = document.getElementById('horror');
 	createMoviesTemplates(comedyList, $comedyContainer)
 	createMoviesTemplates(sciFicList, $sciFicContainer)
 	createMoviesTemplates(horrorList, $horrorContainer)
-
-
+	//Obtiene las peliculas realacionadas con la consulta en el formulario
+	async function getMovie(url) {
+		const response	 = await fetch(url)
+		const res 		 = await response.json()
+		const r 		 = res.data.movies
+		return r
+	}
+	//Realiza la consulta y genera el template de las peliculas encontradas
+	$form.addEventListener('submit', async (ev) =>{
+		ev.preventDefault()	
+		$findMovie.innerHTML = ''
+		const inputData	  = new FormData($form)
+		const movies 	  = await getMovie(`${URL_MOVIES_API}limit=5&query_term=${inputData.get('title')}`)
+		const HTMLString  = createMoviesTemplates(movies, $findMovie)
+		$inputMovie.value = ''
+	})
 })()
-
