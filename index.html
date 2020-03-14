@@ -25,35 +25,35 @@
 
     <section class="buscador">
       <h2 tabindex="0" title="que vamos a ver hoy" class="buscador__title">¿Que vamos a ver hoy?</h2>
-      <form id="form">
+      <form class="form" id="form">
         <input tabindex="0" title="buscar" aria-label="buscar" class="buscador__input" id="inputMovie" type="text" name="title" placeholder="Buscar...">
       </form>
     </section>
 
-    <div class="findMovie" id="findMovie">
-      
+    <div class="searchResults hide" id="searchResults">
+      <h2 class="categories__title">Resultados de tu busqueda</h2>
+      <div class="findMovie" id="findMovie">
+      </div>
+      <button id="searchResultsButton"> Ocultar Resultados</button>
     </div>
 
     <div class="categories">
+
       <h2 tabindex="0" title="comedia" class="categories__title">Comedia</h2>
       <section class="carousel">
         <div class="carousel__container" id="comedy">
-
         </div>
       </section>
 
       <h2 tabindex="0" title="ciencia ficción" class="categories__title">Ciencia Ficción</h2>
       <section class="carousel">
         <div class="carousel__container" id="sciFic">
-
         </div>
       </section>
 
       <h2 tabindex="0" title="terror" class="categories__title">Terror</h2>
       <section class="carousel">
-        <div class="carousel__container" id="horror">
-
-          
+        <div class="carousel__container" id="horror">  
         </div>
       </section>
 
